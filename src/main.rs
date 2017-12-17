@@ -3,10 +3,13 @@
 
 extern crate rocket;
 
+use rocket_contrib::Template;
+
 #[get("/")]
 fn index() -> Template {
-    let context = /* object-like value */;
-    Template::render("index", &context)
+    //let context = /* object-like value */;
+    //Template::render("index", &context)
+    Template::render("index")
 }
 
 fn main() {
