@@ -43,7 +43,7 @@ gulp.task('scripts', function() {
  |--------------------------------------------------------------------------
  */
 var external_styles = [
-    './node_modules/normalize.css/normalize.css',
+    './node_modules/node-normalize-scss/_normalize.scss',
     './sass/app.scss'
 ];
 
