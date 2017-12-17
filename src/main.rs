@@ -4,8 +4,9 @@
 extern crate rocket;
 
 #[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+fn index() -> Template {
+    let context = /* object-like value */;
+    Template::render("index", &context)
 }
 
 fn main() {

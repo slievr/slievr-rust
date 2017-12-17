@@ -54,7 +54,7 @@ gulp.task('styles', function() {
     .pipe(sassGlob())
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('../../public/css'));
+    .pipe(gulp.dest('./public/css'));
 });
 
 
