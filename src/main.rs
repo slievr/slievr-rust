@@ -20,11 +20,7 @@ struct TemplateContext {
 #[get("/")]
 fn index() -> Redirect {
     let context = TemplateContext {
-<<<<<<< HEAD
         name: "Home".to_string(),
-=======
-        name: "Home",
->>>>>>> master
         items: vec!["One", "Two", "Three"].iter().map(|s| s.to_string()).collect()
     };
 
