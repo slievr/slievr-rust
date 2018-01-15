@@ -6,6 +6,7 @@ extern crate rocket;
 #[macro_use] extern crate serde_derive;
 
 #[cfg(test)] mod tests;
+mod static_files;
 
 use rocket::Request;
 use rocket::response::Redirect;
@@ -46,7 +47,7 @@ fn not_found(req: &Request) -> Template {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, get])
+        .mount("/", routes![index, get, static_files::all])
         .attach(Template::fairing())
         .catch(errors![not_found])
 }
