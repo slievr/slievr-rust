@@ -19,7 +19,12 @@ struct TemplateContext {
 
 #[get("/")]
 fn index() -> Redirect {
-    Redirect::to("/hello/Unknown")
+    let context = TemplateContext {
+        name: Home,
+        items: vec!["One", "Two", "Three"].iter().map(|s| s.to_string()).collect()
+    };
+
+    Template::render("index", &context)
 }
 
 #[get("/hello/<name>")]
