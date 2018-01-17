@@ -7,5 +7,4 @@ matrix:
   allow_failures:
     - rust: nightly
 script:
-  - cargo upgrade
-  - cargo run
+  - cargo run --verbose
